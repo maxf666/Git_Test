@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!-- 需要配置组件controller，handlerMapping，ViewResolver，Interceptor  如果是注解方式，controller和handlerMapping不用配置 -->
+    <bean id="testController" name="/hello.do" class="com.zgxcw.demo.spring.SpringMvcTest"></bean>
+
+    <!--视图解析器 /WEB-INF/jsp/index.jsp -->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/views/"></property>
+        <property name="suffix" value=".html"></property>
+    </bean>
+</beans>
